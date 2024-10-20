@@ -1,20 +1,20 @@
 import { useState, useEffect } from "react";
 import { Character } from "./Character";
 
-// function NavPage({ page, setPage }) {
-//   return (
-//     <header className="d-flex justify-content-between align-items-center">
-//       <p>Page: {page}</p>
+function NavPage({ page, setPage }) {
+  return (
+    <header className="d-flex justify-content-between align-items-center">
+      <p>Page: {page}</p>
 
-//       <button
-//         className="btn btn-primary btn-sm"
-//         onClick={() => setPage(page + 1)}
-//       >
-//         Page {page + 1}
-//       </button>
-//     </header>
-//   );
-// }
+      <button
+        className="btn btn-primary btn-sm"
+        onClick={() => setPage(page + 1)}
+      >
+        Page {page + 1}
+      </button>
+    </header>
+  );
+}
 
 export function CharacterList() {
   const [loading, setLoading] = useState(true);
@@ -50,7 +50,7 @@ export function CharacterList() {
     
   return (
     <div className="">
-      {/* <NavPage page={page} setPage={setPage} /> */}
+      <NavPage page={page} setPage={setPage} />
       
     <div className="flex w-screen ">
       <div className="w-60 m-3 p-4 border border-red-900"> 
@@ -103,7 +103,7 @@ export function CharacterList() {
     </div>
     
 
-      {/* <NavPage page={page} setPage={setPage} /> */}
+      <NavPage page={page} setPage={setPage} />
     </div>
   );
 }
